@@ -1,0 +1,12 @@
+.nav {
+    background-color: orangered;
+    color: white;
+    font-weight: 400;
+    font-size: 2.4rem;
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+}
+.nav__unodered-list{
+    list-style: none;
+}    

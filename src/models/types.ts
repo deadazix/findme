@@ -1,0 +1,1 @@
+export type ToolType = 'obstacle'|'target'|'init'
