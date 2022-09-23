@@ -1,0 +1,20 @@
+.block{
+    background-color: var(--primary1);
+    width: 100%;
+    aspect-ratio: 1;
+    border-left: 1px solid var(--primary6);
+    border-bottom: 1px solid var(--primary6);
+    background-color:  var(--primary1);
+
+}
+/* STATES */
+.obstacle {
+    background-color: brown;
+
+}
+.start{
+    background-color:green;
+}
+.home {
+    background-color: blue;
+}

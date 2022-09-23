@@ -7,7 +7,7 @@ const Toolbar = () => {
     <menu className={classes.menu}>
       <ul className={classes["tools-list"]}>
         <Tool
-          type='init'
+          type='start'
         />
         <Tool
           
@@ -15,7 +15,7 @@ const Toolbar = () => {
           
         />
         <Tool
-          type='target'
+          type='home'
         />
       </ul>
     </menu>

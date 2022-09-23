@@ -1,0 +1,10 @@
+.blocks {
+    margin-top: 2rem;
+    width: 30rem;
+    margin-left: auto;
+    margin-right: auto;
+    display: grid;
+    grid-template-columns: repeat(10,1fr);
+    border-right: 1px solid var(--primary6);
+    border-top: 1px solid var(--primary6);
+}

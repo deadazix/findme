@@ -6,6 +6,15 @@
 :root{
     --color-gray:#333
     --shadow:0 1px 10px 1px rgb(209, 209, 209);
+    
+    --primary1:white;
+    --primary6:gray;
+    --primary2:blue;
+    --primary3:orangered;
+    --primary4:green;
+    --primary5: cyan ;
+
+    
 }
 html {
     font-size: 62.5%;

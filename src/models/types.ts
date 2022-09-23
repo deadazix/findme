@@ -1,1 +1,1 @@
-export type ToolType = 'obstacle'|'target'|'init'
+export type ToolType = 'obstacle'|'start'|'home'
