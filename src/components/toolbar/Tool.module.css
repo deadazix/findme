@@ -1,0 +1,17 @@
+.tool{
+    border-radius: 10rem;
+    width: 3.6rem;
+    height: 2.4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    transition: .3s;
+    cursor: pointer;
+    padding: 1.2rem 2.4rem;
+
+}
+.tool--active{
+    box-shadow: inset 2px 2px 2px 2px rgb(209, 209, 209) ;
+
+}
