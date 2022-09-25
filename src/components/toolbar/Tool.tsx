@@ -3,6 +3,7 @@ import { useAppDispatch, useAppSelector } from "../../hooks/reduxHooks";
 import classes from "./Tool.module.css";
 import { uiActions } from "../../redux/slices/uiSLice";
 import { ToolType } from "../../models/types";
+import nonUpdateStateController from "../../stateController/stateController";
 
 const TYPE_TO_TOOL_SYMBOL = (toolType: ToolType) => {
   const symbolsObj = {
@@ -22,7 +23,7 @@ const Tool: React.FC<ToolFace> = (props) => {
   const dispatch = useAppDispatch()
   const onClickHandler = ()=>{
     dispatch(uiActions.changeToolsState(props.type))
-
+    nonUpdateStateController.toolState = props.type
   }
 
   return (

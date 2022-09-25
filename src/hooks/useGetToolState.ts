@@ -7,7 +7,7 @@ const useGetToolState = () => {
     const toolState = useAppSelector(state => state.ui.ToolsState)
     const getToolState =useCallback(()=>toolState,[])
 
-  return {getToolState} 
+  return 'home' 
     
 }
 
