@@ -1,6 +1,10 @@
 import { ToolType } from "../models/types";
 class NonUpdateStateController {
   public toolState: ToolType;
+  public startIndex:undefined | number
+  public homeIndex: undefined | number
+  public obstacleIndexes : number[]= []
+
   private static instance: NonUpdateStateController;
   static getInstance() {
     if (this.instance) {

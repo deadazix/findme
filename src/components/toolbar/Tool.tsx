@@ -2,25 +2,17 @@ import React from "react";
 import { useAppDispatch, useAppSelector } from "../../hooks/reduxHooks";
 import classes from "./Tool.module.css";
 import { uiActions } from "../../redux/slices/uiSLice";
-import { ToolType } from "../../models/types";
+import { ToolFace } from "../../models/interfaces";
+import { GetToolSymbol as TYPE_TO_TOOL_SYMBOL  } from "../../utils/getToolSymbol";
 import nonUpdateStateController from "../../stateController/stateController";
 
-const TYPE_TO_TOOL_SYMBOL = (toolType: ToolType) => {
-  const symbolsObj = {
-    start: "S",
-    obstacle: "O",
-    home: "H",
-  } as const;
-  return symbolsObj[toolType];
-};
 
-interface ToolFace {
-  type: ToolType;
-}
 const Tool: React.FC<ToolFace> = (props) => {
   const curretTool = useAppSelector((state) => state.ui.ToolsState);
-  const toolClass = curretTool === props.type ? classes["tool--active"] : "";
   const dispatch = useAppDispatch()
+  // GET CLASS
+  const toolClass = curretTool === props.type ? classes["tool--active"] : "";
+  // HANDLERS
   const onClickHandler = ()=>{
     dispatch(uiActions.changeToolsState(props.type))
     nonUpdateStateController.toolState = props.type
