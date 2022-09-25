@@ -5,6 +5,7 @@
     border-left: 1px solid var(--primary6);
     border-bottom: 1px solid var(--primary6);
     background-color:  var(--primary1);
+    transition: .3s;
 
 }
 /* STATES */
@@ -17,4 +18,7 @@
 }
 .home {
     background-color: blue;
+}
+.active {
+    background-color: cyan;
 }

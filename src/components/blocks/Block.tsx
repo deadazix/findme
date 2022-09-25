@@ -43,7 +43,7 @@ const Block: React.FC<BlockFace> = (props) => {
       dispatch(
         blocksActions.changeBlockStateById({
           id: homeIndex,
-          newState: "non-active",
+          newState: 'non-active',
         })
       );
     }

@@ -1,5 +1,5 @@
 import { ToolType } from "../models/types";
-class NonUpdateStateController {
+export class NonUpdateStateController {
   public toolState: ToolType;
   public startIndex:undefined | number
   public homeIndex: undefined | number
