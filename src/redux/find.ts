@@ -1,7 +1,9 @@
 import { store } from "./store";
 import { blocksActions } from "./slices/blocksSlice";
 import { getNextForOneIndex } from "../utils/getNextForOneIndex";
+import { DistanceType } from "./slices/uiSLice";
 import { getNextLayer } from "../utils/getNextLayer";
+import { uiActions } from "./slices/uiSLice";
 import nonUpdateStateController from "../stateController/stateController";
 
 const promise = (s: number) =>
@@ -11,7 +13,7 @@ const promise = (s: number) =>
     }, s * 1000);
   });
 const find = async () => {
-  let isFound: boolean = false;
+  let dist:DistanceType = 0
   const startIndex = nonUpdateStateController.startIndex;
   const homeIndex = nonUpdateStateController.homeIndex;
   const columnCount = store.getState().ui.dimention.columnsCount;
@@ -23,6 +25,7 @@ const find = async () => {
   let currentLayerIndex: Set<number> = new Set([startIndex]);
 
   while (true) {
+    
     let NextIsAllowed = true;
     let nextLayerIndexFilteredEdge = getNextLayer(
       currentLayerIndex,
@@ -51,11 +54,17 @@ const find = async () => {
         blocksActions.changeBlockStateById({ id: index, newState: 'active' })
       );
     });
+
+    dist++
     currentLayerIndex = nextLayerIndexFilteredEdge;
     if (!NextIsAllowed) {
       store.dispatch(
         blocksActions.changeBlockStateById({ id: homeIndex, newState: 'start'})
       );
+      store.dispatch(
+        uiActions.setDistance(dist)
+
+      )
 
         break
     }

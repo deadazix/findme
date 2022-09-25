@@ -20,7 +20,7 @@ const Tool: React.FC<ToolFace> = (props) => {
 
   return (
     <li onClick={onClickHandler} className={`${classes.tool} ${toolClass}`}>
-      {TYPE_TO_TOOL_SYMBOL(props.type)}
+      {props.type}
     </li>
   );
 };

@@ -1,13 +1,13 @@
 .menu{
-    position: absolute;
     bottom: 2.4rem;
-    left: 50%;
-    transform: translateX(-50%);
-    padding: 1.2rem 2.4rem;
-    border-radius: 4.4rem;
+    background-color: var(--primary1);
     box-shadow: 0 1px 10px 1px rgb(209, 209, 209);
+    display: flex;
+    flex-direction: column;
+    
+    
 }
 .tools-list{
     display: flex;
-    gap: 1.2rem;
+    justify-content: space-around;
 }

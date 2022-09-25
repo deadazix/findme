@@ -20,9 +20,11 @@ const BottonStart: React.FC<ButtonStartFace> = (props) => {
     <button
       onClick={startHandler}
       type={props.type}
+      
       className={`${classes["button--start"]} ${props.className}`}
     >
       {props.children}
+      
     </button>
   );
 };

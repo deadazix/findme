@@ -9,7 +9,6 @@ const Toolbar = () => {
         <Tool type='obstacle' />
         <Tool type='home' />
       </ul>
-      <ButtonStart type="button" className={classes['button--start']} >start</ButtonStart>
 
     </menu>
 

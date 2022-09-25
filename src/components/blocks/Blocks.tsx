@@ -9,6 +9,7 @@ const Blocks = () => {
   const { rowsCount, columnsCount } = useAppSelector(
     (state) => state.ui.dimention
   );
+  const distanceState = useAppSelector((state) => state.ui.distance);
   // GETING BLOCKS NUMBERS
   const blocks = [];
   for (let i = 1; i <= rowsCount * columnsCount; i++) {
@@ -21,13 +22,10 @@ const Blocks = () => {
     <section className={classes.blocks}>
       {blocks.map((id) => {
         dispatch(blocksActions.addBlockById(id));
-        return (
-          <Block
-            key={id}
-            id={id}
-          />
-        );
+        return <Block key={id} id={id} />;
       })}
+
+      {distanceState && <h1 className={classes.distance}>{distanceState}</h1>}
     </section>
   );
 };
